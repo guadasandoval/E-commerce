@@ -2,6 +2,7 @@
 \.classpath
 \.project
 target/
+\.mvn
 # Compiled class file
 *.class
 
