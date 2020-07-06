@@ -5,6 +5,10 @@ public class DetalleForm {
 	private int idProd;
 	private int cantidadProd;
 	
+	public DetalleForm (int idProd, int cantidadProd) {
+		this.idProd = idProd;
+		this.cantidadProd= cantidadProd;
+	}
 	
 	public int getIdProd() {
 		return idProd;

@@ -99,7 +99,7 @@ public class VentaController {
 				detalleService.actualizarStock(prodDetalle);
 
 				detalleVenta.add(prodDetalle);
-				
+				detalleService.guardar(prodDetalle);
 
 			}
 			venta.setDetalleVenta(detalleVenta);
@@ -124,8 +124,20 @@ public class VentaController {
 		return new ResponseEntity("El id ingresado no existe", HttpStatus.BAD_REQUEST);
 	}
 
+	
+	@GetMapping(path = "/total/{id}")
+	public ResponseEntity <Venta> totalVenta (@PathVariable Integer id){
+		Venta venta = ventaService.obtenerPorId(id).get();
+		
+		double total = ventaService.getTotalVenta(venta);
+		
+		return new ResponseEntity(total, HttpStatus.OK);
+	}
+	
+	
+	
 	@DeleteMapping(path = "/venta/{id}")
-	@PreAuthorize("hasRole('ADMIN')")
+	
 	public ResponseEntity<Venta> borrarVenta(@PathVariable Integer id) {
 
 		ventaService.borrar(id);

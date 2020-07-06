@@ -21,6 +21,7 @@ import com.ecommerce.repository.CategoriaRepo;
 
 import com.ecommerce.service.ProductoService;
 
+import io.swagger.annotations.ApiOperation;
 import io.swagger.v3.oas.annotations.Operation;
 import javassist.NotFoundException;
 
@@ -39,6 +40,7 @@ public class ProductoController {
 	CategoriaRepo categoriaRepo;
 
 	@GetMapping(path = "/productos")
+	
 	@Operation(summary = "Lista de productos", description = "Obtener lista de productos")
 	public ResponseEntity<List<Producto>> listarProductos() {
 
@@ -49,7 +51,7 @@ public class ProductoController {
 
 	@GetMapping(path = "/producto/{id}")
 	@Operation(summary = "Producto id", description = "Obtener productos por id")
-	public ResponseEntity<Producto> buscarPorId(Integer id) {
+	public ResponseEntity<Producto> buscarPorId(@PathVariable Integer id) {
 
 		if (prodService.existePorId(id)) {
 
@@ -61,7 +63,7 @@ public class ProductoController {
 	}
 
 	@PostMapping(path = "/producto")
-	@PreAuthorize("hasRole('admin')")
+
 	@Operation(summary = "Cargar", description = "cargar productos")
 	public ResponseEntity<Producto> guardarProd(@RequestBody ProductoForm prod) {
 

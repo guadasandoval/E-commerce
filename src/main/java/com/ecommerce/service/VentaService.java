@@ -1,8 +1,9 @@
 package com.ecommerce.service;
 
-
+import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 import javax.transaction.Transactional;
 
@@ -16,10 +17,6 @@ import com.ecommerce.model.Venta;
 import com.ecommerce.repository.ProductoRepo;
 import com.ecommerce.repository.VentaRepo;
 
-
-
-
-
 @Service
 @Transactional
 public class VentaService {
@@ -29,7 +26,7 @@ public class VentaService {
 
 	@Autowired
 	DetalleVentaService detalleService;
-	
+
 	@Autowired
 	ProductoRepo prodRepo;
 
@@ -52,25 +49,26 @@ public class VentaService {
 
 	public void borrar(Integer id) {
 		ventaRepo.deleteById(id);
-		
+
 	}
 
-public double getTotalVenta(Venta venta) {
-	
-	double total = 0;
-	
-	for(DetalleVenta prodDetalle : venta.getDetalleVenta()) {
-		
-		total = total+ detalleService.getTotalProducto(prodDetalle);
-		
-	}
-	
-	return total;
-}
+	public int getTotalVenta(Venta venta) {
 
-public List<Venta> obtenerPorUsuario(Usuario user) {
-	ventaRepo.findByUsuario(user);
-	return null;
-}
+		int total = 0;
+
+		for (DetalleVenta prodDetalle : venta.getDetalleVenta()) {
+
+			total += detalleService.getTotalProducto(prodDetalle);
+
+		}
+
+		return total;
+	}
+
+	public List<Venta> obtenerPorUsuario(Usuario user) {
+		List<Venta> ventasUsuario = ventaRepo.findByUsuario(user);
+		
+		return ventasUsuario;
+	}
 
 }

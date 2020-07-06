@@ -29,10 +29,11 @@ public class MetodoPagoController {
 	VentaService ventaService;
 
 	// devolvemos un string con el PaymentIntent convertido en JSON.
+	
 	@PostMapping("/pagar")
 	public ResponseEntity<MetodoDePago> crearPago(@RequestBody PagoForm pagoForm) throws StripeException {
 
-	//	String token = request.getHeader("token");
+	
 		MetodoDePago metodoPago = new MetodoDePago();
 		Venta venta = ventaService.obtenerPorId(pagoForm.getIdVenta()).get();
 

@@ -138,7 +138,7 @@ public class UsuarioController {
 
 	@GetMapping(path = "/login/{id}")
 	@Operation(summary = "Usuario id", description = "Obtener usuarios por id")
-	public ResponseEntity<Usuario> buscarPorId(Integer id) {
+	public ResponseEntity<Usuario> buscarPorId(@PathVariable Integer id) {
 		if (usuarioService.existePorId(id)) {
 
 			Usuario user = usuarioService.obtenerPorId(id).get();

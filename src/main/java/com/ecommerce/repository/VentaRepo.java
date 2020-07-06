@@ -1,6 +1,7 @@
 package com.ecommerce.repository;
 
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -12,7 +13,7 @@ import com.ecommerce.model.Venta;
 @Repository
 public interface VentaRepo extends JpaRepository<Venta, Integer>{
 
-	public Optional<Usuario> findByUsuario(Usuario user);
+	public List<Venta> findByUsuario(Usuario user);
 	
 	
 

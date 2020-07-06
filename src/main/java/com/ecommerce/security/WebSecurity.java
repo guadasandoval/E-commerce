@@ -16,6 +16,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
+
 import com.ecommerce.security.JWT.JwtEntryPoint;
 import com.ecommerce.security.JWT.JwtTokenFilter;
 import com.ecommerce.service.UserDetailsServiceImpl;
@@ -23,6 +24,7 @@ import com.ecommerce.service.UserDetailsServiceImpl;
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
+
 
 public class WebSecurity extends WebSecurityConfigurerAdapter {
 
@@ -68,10 +70,7 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
 
 	
 	
-	
-	
-	
-    
+	  
 
 	
 	}
