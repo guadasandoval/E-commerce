@@ -6,10 +6,7 @@ REST API e-commerce that supports the CRUD operation of users and products
 
 ## Comenzando 🚀
 
-_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
-
-Mira **Deployment** para conocer como desplegar el proyecto.
-
+Proyecto final donde se integran los temas vistos durante el curso. El desarrollo de la plataforma incorpora SpringBoot como framawork,
 
 ### Swagger
 
@@ -22,7 +19,7 @@ Da un ejemplo
 ## Construido con 🛠️
 
 
-* [SpringBoot] (https://start.spring.io/) - El framework web usado
+* [Spring] (https://start.spring.io/) - El framework web usado
 * [Maven](https://maven.apache.org/) - Manejador de dependencias
 * [MySQL](https://dev.mysql.com/downloads/workbench/) - Usado para manejar la base de datos
 
