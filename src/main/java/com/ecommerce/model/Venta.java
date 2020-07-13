@@ -36,10 +36,11 @@ public class Venta {
 	public Venta() {
 
 	}
+	
 
-	public Venta(Integer id, Usuario usuario, Set<DetalleVenta> detalleVenta, Date fecha) {
-		super();
-		this.id = id;
+
+	public Venta( Usuario usuario, Set<DetalleVenta> detalleVenta, Date fecha) {
+		
 		this.usuario = usuario;
 		this.detalleVenta = detalleVenta;
 		this.fecha = fecha;

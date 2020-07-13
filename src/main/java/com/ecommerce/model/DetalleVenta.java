@@ -30,9 +30,9 @@ public class DetalleVenta {
 
 	private int precio;
 
-	public DetalleVenta(Integer id, Producto prod, Venta venta, int cantidad, int precio) {
+	public DetalleVenta( Producto prod, Venta venta, int cantidad, int precio) {
 
-		this.id = id;
+		
 		this.prod = prod;
 		this.venta = venta;
 		this.cantidad = cantidad;

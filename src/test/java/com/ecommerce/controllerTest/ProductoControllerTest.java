@@ -1,4 +1,4 @@
-package com.ecommerce.ecommerce;
+package com.ecommerce.controllerTest;
 
 import org.junit.jupiter.api.Test;
 

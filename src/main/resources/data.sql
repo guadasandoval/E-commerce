@@ -1,0 +1,3 @@
+INSERT INTO USUARIO (NOMBRE, NOMBRE_USUARIO, EMAIL, CONTRASENA) VALUES ('TEST1', 'TESTER1','TESTER@ADA.COM', 'PRUEBATEST');
+
+insert into categoria (nombre) values ('limpieza');
