@@ -8,13 +8,6 @@ REST API e-commerce that supports the CRUD operation of users and products
 
 Proyecto final donde se integran los temas vistos durante el curso. El desarrollo de la plataforma incorpora SpringBoot como framawork,
 
-### Swagger
-
-_Explica que verifican estas pruebas y por qué_
-
-```
-Da un ejemplo
-```
 
 ## Construido con 🛠️
 
